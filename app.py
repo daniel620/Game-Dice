@@ -24,10 +24,11 @@ def index():
         player_num = int(request.form.get("player_num"))
         game_dice_num = int(request.form.get("game_dice_num"))
         game_point_chosen = int(request.form.get("game_point_chosen"))
+
         r1, r2 = my_player.technical_analysis(player_num, game_dice_num, game_point_chosen)
-        return(render_template("index.html", result1 = r1, result2=r2, last_input = last_input))
+        return(render_template("index.html", result1 = r1, result2=r2, last_input = last_input,last_player_num=player_num, last_game_dice_num=game_dice_num, last_game_point_chosen=game_point_chosen))
     else:
-        return(render_template("index.html", result1 = "Waiting", result2="Waiting", last_input = ''))
+        return(render_template("index.html", result1 = "Waiting", result2="Waiting", last_input = '',last_player_num=None, last_game_dice_num=None, last_game_point_chosen=None))
 
 if __name__ == "__main__":
     app.run()

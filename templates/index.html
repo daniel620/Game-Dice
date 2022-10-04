@@ -1,12 +1,13 @@
 <html align="center">
     <body>
         <!-- 居中 ,algin:center-->
-        <h1 al>Predict DBS Share Price</h1>
+        <h1 al>Dice Game</h1>
+        <h3>Author: H.L.ZUO <a href="https://github.com/daniel620/Game-Dice">GitHub</a> </h3>
         <form action="/" method="post">
             <p>Dices in hand <input type="text" name="dice_in_hand" placeholder="E.g. 1,6,1,4,4" autocomplete="on" value={{last_input}} ></p>
-            <p>Player number <input type="number" step="1" name="player_num"></p>
-            <p>Dice number <input type="number" step="1" name="game_dice_num"></p>
-            <p>Point chosen <input type="number" step="1" name="game_point_chosen"></p>
+            <p>Player number <input type="number" step="1" name="player_num" value={{last_player_num}}></p>
+            <p>Dice number <input type="number" step="1" name="game_dice_num" ></p>
+            <p>Point chosen <input type="number" step="1" name="game_point_chosen" ></p>
 
             <p><input type="submit" value="Enter"></p>
         </form>

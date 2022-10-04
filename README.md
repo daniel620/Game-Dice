@@ -10,3 +10,15 @@
 甲：我认为有7个3
 乙：我不信，开
 场上结果：甲乙两人10个骰子中共有4个3，2个1，这样算作6个3。因此甲说的过多，甲输掉游戏。
+
+# Statistical model
+
+## Binomial Distribution
+
+### Probability mass function
+
+![Probability mass function for the binomial distribution](https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Binomial_distribution_pmf.svg/2560px-Binomial_distribution_pmf.svg.png)
+
+### Cumulative distribution function (CDF)
+
+![Cumulative distribution function for the binomial distribution](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Binomial_distribution_cdf.svg/1920px-Binomial_distribution_cdf.svg.png)

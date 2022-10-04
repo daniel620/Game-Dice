@@ -31,7 +31,7 @@ def index():
         return(render_template("index.html", result1 = "Waiting", result2="Waiting", last_input = '',last_player_num=None, last_game_dice_num=None, last_game_point_chosen=None))
 
 if __name__ == "__main__":
-    from gevent import pywsgi
-    server = pywsgi.WSGIServer(('127.0.0.1', 5000), app)
-    server.serve_forever()
-    # app.run()
+    # from gevent import pywsgi
+    # server = pywsgi.WSGIServer(('127.0.0.1', 5000), app)
+    # server.serve_forever()
+    app.run()

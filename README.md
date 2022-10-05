@@ -61,3 +61,5 @@ Results on the field: A and B have 4 3s and 2 1s out of the 10 dice, which is co
 ## Validation
 
 Monte Carlo simulation method is used to validate the result.
+
+![1664964744224](image/README/1664964744224.png)

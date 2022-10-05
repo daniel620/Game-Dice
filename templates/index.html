@@ -1,17 +1,114 @@
 <html align="center">
-    <body>
-        <!-- 居中 ,algin:center-->
-        <h1 al>Dice Game</h1>
-        <h3>Author: H.L.ZUO <a href="https://github.com/daniel620/Game-Dice">GitHub</a> </h3>
-        <form action="/" method="post">
-            <p>Dices in hand <input type="text" name="dice_in_hand" placeholder="E.g. 1,6,1,4,4" autocomplete="on" value={{last_input}} ></p>
-            <p>Player number <input type="number" step="1" name="player_num" value={{last_player_num}}></p>
-            <p>Dice number <input type="number" step="1" name="game_dice_num" ></p>
-            <p>Point chosen <input type="number" step="1" name="game_point_chosen" ></p>
+    <head>
+        <meta charset="UTF-8">
+        <title>H.L.ZUO</title>
+        <style>
+            .input-box {
+                width: 300px;
+                border:2px solid darkblue;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                text-align:center;
+                flex-direction: column;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 25px auto 0;
+            }
+            
+            .output-box {
+                width: 300px;
+                border:2px solid darkcyan;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                text-align:center;
+                flex-direction: column;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 10px auto 0;
+            }
+            .login-title {
+                font-size: 1.1em;
+                font-weight: bold;
+                padding: 0px 0;
+            }
+    
+            .form-group {
+                display: flex;
+                text-align: center;
+                align-content: center;
+                align-items: center;
+            }
+    
+            .form-label {
+                font-weight: bold;
+                width: 300px;
 
-            <p><input type="submit" value="Enter"></p>
-        </form>
-        <p>Choice 1 - {{result1}}</p>
-        <p>Choice 2 - {{result2}}</p>
+            }
+            .form-control{
+                text-align: center;
+                width: 100px;
+                border-radius: 10px;
+                border: 1.2px solid rgb(35, 67, 196);
+            }
+            .btn{
+                border: 1px solid rgb(35, 67, 196);
+                border-radius: 10px;
+                width: 100px;
+                height: 30px;
+            }
+            .bg{
+                background: url("img.jpg");
+                background-clip: content-box;
+                background-position: center;
+            }
+        </style>
+    
+    </head>
+    <body background="/static/img.jpg">
+            <h1 al>Dice Game</h1>
+            <h3>Author: H.L.ZUO <a href="https://github.com/daniel620/Game-Dice">GitHub</a> </h3>
+            <div class="input-box">
+                <form action="/" method="post">
+                    <div class="form-group">
+                        <p class="form-label">Player number 
+                            <input class="form-control" type="number" step="1" name="player_num" placeholder="E.g. 3" value={{last_player_num}}>
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <p class="form-label">Dices in hand 
+                            <input class="form-control" type="text" name="dice_in_hand" placeholder="E.g. 1,6,1,4,4" autocomplete="on" value={{last_input}} >
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <p class="form-label">Is one out
+                            <input type="radio" name="is_one_out" value="1" id="Yes">
+                            <label for="Yes">Yes</label>
+                            <input type="radio" name="is_one_out" value="0" id="No" checked="checked">
+                            <label for="No">No</label>
+                        </p>
+                    </div> 
+                    <div class="form-group">
+                        <p class="form-label">Dice number 
+                            <input class="form-control" type="number" min="1" max="24" maxlength="5" step="1" 
+                            name="game_dice_num" placeholder="1 ~ 24" required>
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <p class="form-label">Point chosen 
+                            <input class="form-control" type="number" min="1" max="6" maxlength="5" step="1" 
+                            name="game_point_chosen" placeholder="1 ~ 6" required>
+                        </p>
+                    </div>
+                    <p><input class="btn" type="submit" value="Enter"></p>
+                </form>
+            </div>
+
+            <div class="output-box">
+                <div class="login-title">Technical Analysis</div>
+                <p class="form-label">Choice 1 - {{result1}}</p>
+                <p class="form-label">Choice 2 - {{result2}}</p>
+            </div>
     </body>
 </html>

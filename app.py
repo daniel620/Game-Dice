@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 from Player import player
 import numpy as np
 # import joblib
-app = Flask(__name__)
+app = Flask(__name__,static_folder="static",static_url_path="/static")
 
 
 @app.route("/", methods = ["GET", "POST"])
@@ -21,11 +21,14 @@ def index():
             return render_template("index.html", result1 = 'Invalid input', result2='')
 
         my_player = player(dice_in_hand)
+        is_one_out = bool(int(request.form.get("is_one_out")))
+        print("---get: ", request.form.get("is_one_out"))
+        print("----is_one_out: ",is_one_out)
         player_num = int(request.form.get("player_num"))
         game_dice_num = int(request.form.get("game_dice_num"))
         game_point_chosen = int(request.form.get("game_point_chosen"))
 
-        r1, r2 = my_player.technical_analysis(player_num, game_dice_num, game_point_chosen)
+        r1, r2 = my_player.technical_analysis(player_num, game_dice_num, game_point_chosen, is_one_out)
         return(render_template("index.html", result1 = r1, result2=r2, last_input = last_input,last_player_num=player_num, last_game_dice_num=game_dice_num, last_game_point_chosen=game_point_chosen))
     else:
         return(render_template("index.html", result1 = "Waiting", result2="Waiting", last_input = '',last_player_num=None, last_game_dice_num=None, last_game_point_chosen=None))

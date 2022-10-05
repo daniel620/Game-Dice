@@ -1,0 +1,23 @@
+<html align="center">
+    <body>
+        <!-- 居中 ,algin:center-->
+        <h1 al>Dice Game</h1>
+        <h3>Author: H.L.ZUO <a href="https://github.com/daniel620/Game-Dice">GitHub</a> </h3>
+        <form action="/" method="post">
+            <p>Player number <input type="number" step="1" name="player_num" placeholder="E.g. 3" value={{last_player_num}}></p>
+            <p>Dices in hand <input type="text" name="dice_in_hand" placeholder="E.g. 1,6,1,4,4" autocomplete="on" value={{last_input}} ></p>
+            <p>Is one out
+                <!-- <input type="radio" name="is_one_out" value="1" checked={{last_is_one_out_checked}}>Yes
+                <input type="radio" name="is_one_out" value="0" checked={{last_not_is_one_out_checked}}>No -->
+                <input type="radio" name="is_one_out" value="1" id="Yes"><label for="Yes">Yes</label>
+                <input type="radio" name="is_one_out" value="0" id="No" checked="checked"><label for="No">No</label>
+            </p>
+            <p>Dice number <input type="number" min="0" max="24" maxlength="5" step="1" name="game_dice_num" required></p>
+            <p>Point chosen <input type="number" min="1" max="6" maxlength="5" step="1" name="game_point_chosen" required></p>
+
+            <p><input type="submit" value="Enter"></p>
+        </form>
+        <p>Choice 1 - {{result1}}</p>
+        <p>Choice 2 - {{result2}}</p>
+    </body>
+</html>

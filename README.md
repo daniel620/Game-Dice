@@ -1,5 +1,9 @@
 # Dice Game
 
+## Guidance
+
+![1664963900605](image/README/1664963900605.png)
+
 ## Deployment
 
 The applet is deployed to heroku: [https://dice-game-zhl.herokuapp.com/](https://dice-game-zhl.herokuapp.com/ "open app")
@@ -24,6 +28,7 @@ The applet is deployed to heroku: [https://dice-game-zhl.herokuapp.com/](https:/
 场上结果：甲乙两人10个骰子中共有4个3，2个1，这样算作6个3。因此甲说的过多，甲输掉游戏。
 
 ## Game Rules (English version)
+
 Description of the game rules: N people form a circle and roll the dice together, each with 5 dice. Each person can only view their own results. Take turns to report the number, the format of the mth person is " $k_m$ $i$ (s)". Where $i$ is the number of dice (1~6). The next home can choose to continue to report the number or open the card.
 If you continue to count, $k_m+1$ must be larger than $k_m$, and $i$ can be different.
 If you choose to open the card, count the number of $i$ in everyone's results. If it is greater than $k_m$, the opener loses, otherwise the upper player loses.
@@ -52,3 +57,7 @@ Results on the field: A and B have 4 3s and 2 1s out of the 10 dice, which is co
 ### Cumulative distribution function (CDF)
 
 ![Cumulative distribution function for the binomial distribution](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Binomial_distribution_cdf.svg/1920px-Binomial_distribution_cdf.svg.png)
+
+## Validation
+
+Monte Carlo simulation method is used to validate the result.

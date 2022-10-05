@@ -1,5 +1,11 @@
 # Dice Game
 
+## Deployment
+
+The applet is deployed to heroku: [https://dice-game-zhl.herokuapp.com/](https://dice-game-zhl.herokuapp.com/ "open app")
+
+## Game Rules (Chinese version)
+
 游戏规则描述：N个人围成一圈一起摇骰子，每人5个骰子。每个人只能查看自己的结果。轮流报数，第m个人的格式为“ $k_m$ 个 $i$ ”。其中 $i$ 为骰子点数（1~6）。下家可以选择继续报数或者开牌。
 若继续报数， $k_m+1$ 一定要比 $k_m$ 大，$i$ 可以不相同。
 若选择开牌，则统计所有人的结果中 $i$ 的个数，若大于 $k_m$ 则开牌者输掉，否则其上家输掉。
